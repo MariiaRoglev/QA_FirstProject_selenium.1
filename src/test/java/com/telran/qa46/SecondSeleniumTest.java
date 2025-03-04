@@ -10,32 +10,33 @@ import java.time.Duration;
 
 public class SecondSeleniumTest
 {
-    WebDriver driver;
+    WebDriver driver; //set a variable
 
     @BeforeMethod
     public void setUp()
     {
-      driver = new ChromeDriver();
+      driver = new ChromeDriver(); // initialize a Variable
+
       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
       driver.manage().window().maximize();
 
-      driver.get("https://www.skype.com/en");
-      driver.navigate().to("https://www.zoom.com/");
+      driver.get("https://www.skype.com/en"); // without any data
+      driver.navigate().to("https://www.zoom.com/"); // with data
+
       driver.navigate().back();
       driver.navigate().forward();
       driver.navigate().refresh();
-
     }
 
 
     @Test
-    public void test()
+    public void test() //start a test
     {
         System.out.println("Browser Opened");
     }
 
 
-    @AfterMethod (enabled = falce)
+    @AfterMethod (enabled = false) //use it - true. do not use it - false
     public void after()
     {
         driver.close();
