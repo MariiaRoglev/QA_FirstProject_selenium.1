@@ -15,22 +15,21 @@ public class SecondSeleniumTest
     @BeforeMethod
     public void setUp()
     {
-      driver = new ChromeDriver(); // initialize a Variable
+      driver = new ChromeDriver(); // initialize a Variable //MUST KNOW!!! open an empty Chrome page
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //MUST KNOW!!!
+      driver.manage().window().maximize(); //MUST KNOW!!! Full screen
 
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-      driver.manage().window().maximize();
+      driver.get("https://www.skype.com/en"); // open this URL without any data
+      driver.navigate().to("https://www.zoom.com/"); // open this URL with data
 
-      driver.get("https://www.skype.com/en"); // without any data
-      driver.navigate().to("https://www.zoom.com/"); // with data
-
-      driver.navigate().back();
-      driver.navigate().forward();
-      driver.navigate().refresh();
+      driver.navigate().back(); //get back to SKYPE
+      driver.navigate().forward(); //get back to ZOOM after SKYPE
+      driver.navigate().refresh(); //UPDATE = REFRESH THE PAGE
     }
 
 
     @Test
-    public void test() //start a test
+    public void test() //to start the test
     {
         System.out.println("Browser Opened");
     }
