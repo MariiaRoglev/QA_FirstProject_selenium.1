@@ -31,7 +31,7 @@ public class SecondSeleniumTest
     @Test
     public void test()
     {
-        System.out.println("Browser is Opened");
+        System.out.println("Browser Opened");
     }
 
 
