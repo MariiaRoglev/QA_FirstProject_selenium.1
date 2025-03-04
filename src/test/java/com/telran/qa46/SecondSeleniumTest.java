@@ -19,7 +19,7 @@ public class SecondSeleniumTest
       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //MUST KNOW!!!
       driver.manage().window().maximize(); //MUST KNOW!!! Full screen
 
-      driver.get("https://www.skype.com/en"); // open this URL without any data
+      driver.get("https://www.skype.com/en"); // open this URL without data
       driver.navigate().to("https://www.zoom.com/"); // open this URL with data
 
       driver.navigate().back(); //get back to SKYPE
