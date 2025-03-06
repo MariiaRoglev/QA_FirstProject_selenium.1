@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class FirstSeleniumTest
+public class FirstSeleniumtTests
 {
     WebDriver driver; //declare a Variable
 

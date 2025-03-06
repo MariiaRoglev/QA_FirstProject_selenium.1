@@ -16,7 +16,7 @@ public class SecondSeleniumTest
     public void setUp()
     {
       driver = new ChromeDriver(); // initialize a Variable //MUST KNOW!!! open an empty Chrome page
-      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //MUST KNOW!!!
+      driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); //MUST KNOW!!! all elements should be loaded
       driver.manage().window().maximize(); //MUST KNOW!!! Full screen
 
       driver.get("https://www.skype.com/en"); // open this URL without data
