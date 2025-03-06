@@ -11,11 +11,10 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class FindElementTests()
+public class FindElementTests
 {
 
 WebDriver driver;
-
 
 @BeforeMethod
 public void setUp()
