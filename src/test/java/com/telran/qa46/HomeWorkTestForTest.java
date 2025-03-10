@@ -57,6 +57,54 @@ public class HomeWorkTestForTest
     }
 
 
+  @Test
+  public void simpleStrategyNewTraining()
+  {
+    //by tagname
+      WebElement h3 = driver.findElement(By.tagName("h3"));
+      System.out.println(h3.getText());
+      //by class name
+driver.findElement(By.className("header"));
+    //by id
+driver.findElement(By.id("flyout-cart"));
+    //by text
+driver.findElement(By.linkText("Electronics"));
+    //by partial text
+driver.findElement(By.partialLinkText("downloads"));
+  }
+
+    @Test
+    public void cssSelectorsNewTraining()
+    {
+        //by tagname
+        WebElement h3 = driver.findElement(By.cssSelector("h3"));
+        System.out.println(h3.getText());
+
+        //by class name
+        driver.findElement(By.cssSelector(".header"));
+
+        //by id
+        driver.findElement(By.cssSelector("#flyout-cart"));
+
+        //by text
+        driver.findElement(By.cssSelector("[href='/141-inch-laptop']")); //full
+
+        driver.findElement(By.cssSelector("[href^='/build']")); // starts ^
+
+        driver.findElement(By.cssSelector("[href$='computer']")); // ends $
+
+        driver.findElement(By.cssSelector("[href*='-your-cheap-']")); // contains *
+
+    }
+
+
+
+
+
+
+
+
+
 
 
 
