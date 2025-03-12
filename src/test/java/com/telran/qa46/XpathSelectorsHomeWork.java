@@ -98,23 +98,25 @@ public class XpathSelectorsHomeWork
         driver.findElement(By.xpath("//div[@class='top-menu-triangle']")); //to find parent in the end -> /..
         driver.findElement(By.xpath("//ul[@class='top-menu']"));
 
-        //parent
+        //to find parent of the the child LI -> LI = child of the UL
         driver.findElement(By.xpath("//li/parent::*"));
         driver.findElement(By.xpath("//li/parent::ul"));
         driver.findElement(By.xpath("//li/.."));
 
 
-        //ancestor
+        //ancestor = predok
         driver.findElement(By.xpath("//span/ancestor::*")); //all
-        driver.findElement(By.xpath("//span/ancestor::form")); //all options
-        //driver.findElement(By.xpath("//input/ancestor::form[1]")); //to find only 1 option
+        driver.findElement(By.xpath("//li/ancestor::div")); //all options
+        driver.findElement(By.xpath("//a/ancestor::ul")); //all options
+        driver.findElement(By.xpath("//li/ancestor::div[2]")); //to find only 1 option
 
         //following-sibling
         driver.findElement(By.xpath("//a/following-sibling::*"));
-        driver.findElement(By.xpath("//a/following-sibling::span"));
+        driver.findElement(By.xpath("//script/following-sibling::ul"));
 
         //preceding-sibling
         driver.findElement(By.xpath("//span/preceding-sibling::*"));
+        driver.findElement(By.xpath("//script/preceding-sibling::*"));
 
     }
 
