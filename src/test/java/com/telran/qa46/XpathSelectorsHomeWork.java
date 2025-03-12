@@ -103,7 +103,6 @@ public class XpathSelectorsHomeWork
         driver.findElement(By.xpath("//li/parent::ul"));
         driver.findElement(By.xpath("//li/.."));
 
-
         //ancestor = predok
         driver.findElement(By.xpath("//span/ancestor::*")); //all
         driver.findElement(By.xpath("//li/ancestor::div")); //all options
